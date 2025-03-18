@@ -1,0 +1,17 @@
+{
+  "name": "secretsantagame",
+  "version": "1.0.0",
+  "description": "Acme is organizing a Secret Santa event for its employees, where each participant will be assigned a Secret Child to whom they will anonymously give a gift. To streamline the process and ensure fair distribution, the company aims to automate the assignment of Secret Santa pairs based on employee data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Amudan",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "^3.2.0",
+    "csv-writer": "^1.6.0",
+    "express": "^4.21.2",
+    "xlsx": "^0.18.5"
+  }
+}
