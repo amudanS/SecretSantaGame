@@ -10,6 +10,7 @@ function readExcelData(filePath) {
 
 function readEmployeeData(filePath) {
     if (filePath.endsWith('.xlsx')) {
+        console.log("2")
         return Promise.resolve(readExcelData(filePath));
     }
     return new Promise((resolve, reject) => {

@@ -7,9 +7,12 @@ const writeAssignmentsToCSV = require('./writeAssignments');
 // Main function to execute the Secret Santa assignment
 async function executeSecretSanta(inputFilePath, previousAssignmentsFilePath, outputFilePath) {
     try {
+        console.log("1")
         const employees = await readEmployeeData(inputFilePath);
         const previousAssignments = await readPreviousAssignments(previousAssignmentsFilePath);
-        const assignments = assignSecretChildren(employees, previousAssignments);
+        // console.log("employee",employees);
+        // console.log("3",previousAssignments)
+        const assignments = await assignSecretChildren(employees, previousAssignments);
         await writeAssignmentsToCSV(assignments, outputFilePath);
         console.log('Secret Santa assignments have been successfully created!');
     } catch (error) {
@@ -32,5 +35,5 @@ if (!inputFilePath || !previousAssignmentsFilePath || !outputFilePath) {
     console.error('Usage: node secretSanta.js <employees.csv> <previous_secret_santa_assignments.csv> <secret_santa_assignments.csv>');
     process.exit(1);
 }
-
+console.log("hello")
 executeSecretSanta(inputFilePath, previousAssignmentsFilePath, outputFilePath);
